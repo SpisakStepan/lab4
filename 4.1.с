@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+int chcp, chcpOut = 0;
+int main(void)
+
+{
+  int x, y;
+  float f;
+  unsigned char uu = 0;
+  printf ("\r\nВведіть значення x= ");
+   scanf ("%d", &x);
+   printf ("Введіть значення y= ");
+   scanf ("%d", &y);
+  do {
+    double a_1 = pow(x, 2) + (x * y) - pow(y, 2);
+    double a_2 = 1 + pow(x, 2) + pow(y, 2);
+    double a_3 = a_1 / a_2;
+    if (a_2 == 0)
+    {
+      
+      printf ("обчислюваному виразі: виконується ділення на 0\n");
+      printf("\r\nВведіть дані заново:\r\n");
+    }
+    else {
+      uu = 1;
+      printf("\r\n f = %g\r\n",a_3 );
+    }
+  } 
+  while (uu == 0);
+  return 0;
+}
